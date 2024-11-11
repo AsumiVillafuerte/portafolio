@@ -1,0 +1,209 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e3edf7;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 15px 8%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(0deg, #fff 0%, #edf4fa 51%, #e5eef7 100%);
+    z-index: 100;
+    transition: .3s;
+}
+
+header .logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+span {
+    background:  linear-gradient(180deg, rgb(212, 186, 39)0%,
+    rgb(182, 179, 30)51%,
+    rgb(167, 118, 54)100%);
+
+    
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+ul.navlist {
+    display: flex;
+}
+
+.navlist li {
+    margin: 0 1rem;
+}
+
+.navlist li a {
+    display: inline-flex;
+    font-weight: 600;
+}
+
+.navlist li a:hover,
+.navlist li a.active {
+    background: linear-gradient(180deg, rgb(212, 186, 39)0%,
+    rgb(182, 179, 30)51%,
+    rgb(167, 118, 54)100%);
+
+    
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    grid-gap: .8rem;
+}
+
+.btn {
+    background:  linear-gradient(180deg, rgb(212, 186, 39)0%,
+    rgb(182, 179, 30)51%,
+    rgb(167, 118, 54)100%);
+
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all .3s ease;
+}
+
+.btn:hover,
+.btn-box .d-CV:hover {
+    box-shadow: rgba(0, 0, 0, 0.19)0px 10px 20px,
+        rgba(0, 0, 0, 0.23)0px 6px 6px;
+}
+
+.menu-icon {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu-icon .bar,
+.menu-icon::after,
+.menu-icon::before {
+    content: "";
+    display: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    background: #000;
+    margin: 6px 0;
+    transition: .4s;
+}
+
+.menu-icon.active::before {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.menu-icon.active::after {
+    transform: rotate(45deg)translate(-8px, -8px);
+}
+
+.menu-icon.active .bar {
+    opacity: 0;
+}
+
+/* Estilos generales para la sección de contacto */
+.contacto {
+    max-width: 600px;
+    margin: 100px auto 0; 
+    padding:  70px 10px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-titulo {
+    font-size: 2rem;
+    color: #b08e03;
+    margin-bottom: 10px;
+}
+
+.contacto-descripcion {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contacto-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacto-formulario label {
+    font-size: 0.9rem;
+    color: #333;
+    text-align: left;
+}
+
+.contacto-formulario input,
+.contacto-formulario textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contacto-formulario input:focus,
+.contacto-formulario textarea:focus {
+    outline: none;
+    border-color: #b08e03;
+}
+
+.contacto-boton {
+    padding: 10px 20px;
+    background-color: #b08e03;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contacto-boton:hover {
+    background-color: #b08e03;
+}
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 480px) {
+    .contacto {
+        padding: 20px;
+    }
+
+    .contacto-titulo {
+        font-size: 1.8rem;
+    }
+
+    .contacto-descripcion {
+        font-size: 0.9rem;
+    }
+}
